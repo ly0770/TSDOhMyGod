@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface TSDAnimationManager : NSObject
+/*
+ *
+ */
++ (instancetype)animationManager;
+/*
+ **为button上的图片添加动画效果
+ */
+- (void)animitionWithToolButtonClickOnView:(UIImageView *)view;
 
 @end

@@ -12,7 +12,6 @@
 		72376F3A1E8F8D5B009045CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72376F391E8F8D5B009045CF /* Assets.xcassets */; };
 		72376F481E8F8D5C009045CF /* TSDOhMyGodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F471E8F8D5C009045CF /* TSDOhMyGodTests.m */; };
 		72376F531E8F8D5C009045CF /* TSDOhMyGodUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F521E8F8D5C009045CF /* TSDOhMyGodUITests.m */; };
-		72376F621E8F9136009045CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F611E8F9136009045CF /* ViewController.m */; };
 		72376F691E8F933B009045CF /* TSDAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F681E8F933B009045CF /* TSDAnimationManager.m */; };
 		72376F6C1E8F9363009045CF /* UIButton+ImageAndTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F6B1E8F9363009045CF /* UIButton+ImageAndTitle.m */; };
 		72376F6F1E8F9393009045CF /* TSDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F6E1E8F9393009045CF /* TSDTabBar.m */; };
@@ -54,8 +53,6 @@
 		72376F4E1E8F8D5C009045CF /* TSDOhMyGodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSDOhMyGodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72376F521E8F8D5C009045CF /* TSDOhMyGodUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSDOhMyGodUITests.m; sourceTree = "<group>"; };
 		72376F541E8F8D5C009045CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72376F601E8F9136009045CF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		72376F611E8F9136009045CF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		72376F671E8F933B009045CF /* TSDAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDAnimationManager.h; sourceTree = "<group>"; };
 		72376F681E8F933B009045CF /* TSDAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDAnimationManager.m; sourceTree = "<group>"; };
 		72376F6A1E8F9363009045CF /* UIButton+ImageAndTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageAndTitle.h"; sourceTree = "<group>"; };
@@ -66,7 +63,6 @@
 		72376F711E8F93AD009045CF /* TSDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDTabBarController.m; sourceTree = "<group>"; };
 		72376F731E8F93EB009045CF /* TSDNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDNavigationVC.h; sourceTree = "<group>"; };
 		72376F741E8F93EB009045CF /* TSDNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDNavigationVC.m; sourceTree = "<group>"; };
-		72376F761E8F94F0009045CF /* TSDOhMyGod-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TSDOhMyGod-Prefix.pch"; sourceTree = "<group>"; };
 		72376F771E8F9531009045CF /* TSDOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDOneViewController.h; sourceTree = "<group>"; };
 		72376F781E8F9531009045CF /* TSDOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDOneViewController.m; sourceTree = "<group>"; };
 		72376F7D1E8F9559009045CF /* TSDTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDTwoViewController.h; sourceTree = "<group>"; };
@@ -75,6 +71,7 @@
 		72376F811E8F956E009045CF /* TSDPersonalProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDPersonalProfileViewController.m; sourceTree = "<group>"; };
 		72376F831E8F958C009045CF /* TSDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDUser.h; sourceTree = "<group>"; };
 		72376F841E8F958C009045CF /* TSDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDUser.m; sourceTree = "<group>"; };
+		72376F861E8FA0D4009045CF /* TSDOhMyGod-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSDOhMyGod-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +102,7 @@
 		72376F211E8F8D5B009045CF = {
 			isa = PBXGroup;
 			children = (
+				72376F861E8FA0D4009045CF /* TSDOhMyGod-Prefix.pch */,
 				72376F2C1E8F8D5B009045CF /* TSDOhMyGod */,
 				72376F461E8F8D5C009045CF /* TSDOhMyGodTests */,
 				72376F511E8F8D5C009045CF /* TSDOhMyGodUITests */,
@@ -128,8 +126,6 @@
 				72376F661E8F9323009045CF /* TSDTabBar */,
 				72376F651E8F92AA009045CF /* Images */,
 				72376F641E8F928C009045CF /* TSDNavgation */,
-				72376F601E8F9136009045CF /* ViewController.h */,
-				72376F611E8F9136009045CF /* ViewController.m */,
 				72376F301E8F8D5B009045CF /* AppDelegate.h */,
 				72376F311E8F8D5B009045CF /* AppDelegate.m */,
 				72376F391E8F8D5B009045CF /* Assets.xcassets */,
@@ -151,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				72376F2E1E8F8D5B009045CF /* main.m */,
-				72376F761E8F94F0009045CF /* TSDOhMyGod-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -338,7 +333,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				72376F751E8F93EB009045CF /* TSDNavigationVC.m in Sources */,
-				72376F621E8F9136009045CF /* ViewController.m in Sources */,
 				72376F321E8F8D5B009045CF /* AppDelegate.m in Sources */,
 				72376F721E8F93AD009045CF /* TSDTabBarController.m in Sources */,
 				72376F691E8F933B009045CF /* TSDAnimationManager.m in Sources */,
@@ -478,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 38G9SL53J4;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TSDOhMyGod-Prefix.pch";
 				INFOPLIST_FILE = TSDOhMyGod/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -492,6 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 38G9SL53J4;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TSDOhMyGod-Prefix.pch";
 				INFOPLIST_FILE = TSDOhMyGod/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

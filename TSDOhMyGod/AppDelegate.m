@@ -7,20 +7,43 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "TSDNavigationVC.h"
+#import "TSDTabBarController.h"
+#import "TSDOneViewController.h"
+#import "TSDTwoViewController.h"
+#import "TSDTabBar.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+- (void)showMainView {
+    TSDOneViewController *oneVC = [[TSDOneViewController alloc] init];
+    TSDNavigationVC *oneNav = [[TSDNavigationVC alloc] initWithRootViewController:oneVC];
+    oneVC.hidesBottomBarWhenPushed = NO;
+    
+    TSDTwoViewController *twoVC = [[TSDTwoViewController alloc] init];
+    TSDNavigationVC *twoNav = [[TSDNavigationVC alloc] initWithRootViewController:twoVC];
+    twoVC.hidesBottomBarWhenPushed = NO;
+    
+    TSDTabBarController *tabVC = [[TSDTabBarController alloc] init];
+    tabVC.viewControllers = @[oneNav,twoNav];
+    
+    TSDTabBar* tabBar = [TSDTabBar mTabBar];
+    tabBar.isItemAnimition = YES;
+    [tabBar setSelectedItemIcon:@[@"home1",@"user1"] unselectedItemIcon:@[@"home0",@"user0"] titles:@[@"首页",@"个人"]];
+    tabVC.m_tabBar = tabBar;
+    
+    self.window.rootViewController = tabVC;
+    [self.window makeKeyAndVisible];
+    
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ViewController *vc = [[ViewController alloc] init];
-    vc.view.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = vc;
-    [self.window makeKeyAndVisible];
+    [self showMainView];
     return YES;
 }
 

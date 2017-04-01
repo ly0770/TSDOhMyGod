@@ -9,5 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface TSDUser : NSObject
+/*
+ **
+ */
++ (instancetype)userInstance;
+/*
+ **修改导航栏颜色和透明度，alpha为必填
+ */
+- (void)setNavBarColorWithNavBar:(UINavigationBar *)navBar color:(UIColor *)color alpha:(CGFloat)alpha;
 
 @end

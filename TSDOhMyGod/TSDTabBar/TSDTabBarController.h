@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TSDTabBar.h"
 
 @interface TSDTabBarController : UITabBarController
+@property (nonatomic, strong) TSDTabBar *m_tabBar;
 
 @end

@@ -1,0 +1,15 @@
+//
+//  TSDOhMyGod-Prefix.pch
+//  TSDOhMyGod
+//
+//  Created by Tiya on 2017/4/1.
+//  Copyright © 2017年 Tiya. All rights reserved.
+//
+
+#ifndef TSDOhMyGod_Prefix_pch
+#define TSDOhMyGod_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* TSDOhMyGod_Prefix_pch */

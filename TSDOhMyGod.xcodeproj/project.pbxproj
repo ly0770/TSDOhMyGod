@@ -97,6 +97,9 @@
 		72376F2C1E8F8D5B009045CF /* TSDOhMyGod */ = {
 			isa = PBXGroup;
 			children = (
+				72376F651E8F92AA009045CF /* Images */,
+				72376F641E8F928C009045CF /* TSDNavgation */,
+				72376F631E8F9246009045CF /* TMDTabBar */,
 				72376F601E8F9136009045CF /* ViewController.h */,
 				72376F611E8F9136009045CF /* ViewController.m */,
 				72376F301E8F8D5B009045CF /* AppDelegate.h */,
@@ -132,6 +135,27 @@
 				72376F541E8F8D5C009045CF /* Info.plist */,
 			);
 			path = TSDOhMyGodUITests;
+			sourceTree = "<group>";
+		};
+		72376F631E8F9246009045CF /* TMDTabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TMDTabBar;
+			sourceTree = "<group>";
+		};
+		72376F641E8F928C009045CF /* TSDNavgation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TSDNavgation;
+			sourceTree = "<group>";
+		};
+		72376F651E8F92AA009045CF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

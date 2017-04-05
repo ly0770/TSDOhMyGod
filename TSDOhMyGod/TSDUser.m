@@ -31,4 +31,13 @@
     }
 }
 
+- (id)readDataFromJsonFile:(NSString *)fileName {
+    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:fileName ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:jsonPath];
+    NSError *error;
+    id jsonObject = [NSJSONSerialization JSONObjectWithData:data
+                                                  options:NSJSONReadingAllowFragments
+                                                    error:&error];
+    return jsonObject;
+}
 @end

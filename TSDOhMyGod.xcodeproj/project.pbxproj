@@ -19,13 +19,15 @@
 		72376F751E8F93EB009045CF /* TSDNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F741E8F93EB009045CF /* TSDNavigationVC.m */; };
 		72376F791E8F9531009045CF /* TSDOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F781E8F9531009045CF /* TSDOneViewController.m */; };
 		72376F7F1E8F9559009045CF /* TSDTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F7E1E8F9559009045CF /* TSDTwoViewController.m */; };
-		72376F821E8F956E009045CF /* TSDPersonalProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F811E8F956E009045CF /* TSDPersonalProfileViewController.m */; };
 		72376F851E8F958C009045CF /* TSDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 72376F841E8F958C009045CF /* TSDUser.m */; };
 		72376F8C1E8FA25A009045CF /* home0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72376F871E8FA25A009045CF /* home0@2x.png */; };
 		72376F8D1E8FA25A009045CF /* home1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72376F881E8FA25A009045CF /* home1@2x.png */; };
 		72376F8E1E8FA25A009045CF /* home12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72376F891E8FA25A009045CF /* home12@2x.png */; };
 		72376F8F1E8FA25A009045CF /* user0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72376F8A1E8FA25A009045CF /* user0@2x.png */; };
 		72376F901E8FA25A009045CF /* user1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72376F8B1E8FA25A009045CF /* user1@2x.png */; };
+		726DAA3A1E94916600FC0968 /* bloglist.json in Resources */ = {isa = PBXBuildFile; fileRef = 726DAA391E94916600FC0968 /* bloglist.json */; };
+		726DAA3E1E9497FC00FC0968 /* TSDPersonalProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726DAA3D1E9497FC00FC0968 /* TSDPersonalProfileViewController.m */; };
+		726DAA411E94982E00FC0968 /* TSDBlogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726DAA401E94982E00FC0968 /* TSDBlogListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +74,6 @@
 		72376F781E8F9531009045CF /* TSDOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDOneViewController.m; sourceTree = "<group>"; };
 		72376F7D1E8F9559009045CF /* TSDTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDTwoViewController.h; sourceTree = "<group>"; };
 		72376F7E1E8F9559009045CF /* TSDTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDTwoViewController.m; sourceTree = "<group>"; };
-		72376F801E8F956E009045CF /* TSDPersonalProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDPersonalProfileViewController.h; sourceTree = "<group>"; };
-		72376F811E8F956E009045CF /* TSDPersonalProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDPersonalProfileViewController.m; sourceTree = "<group>"; };
 		72376F831E8F958C009045CF /* TSDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDUser.h; sourceTree = "<group>"; };
 		72376F841E8F958C009045CF /* TSDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDUser.m; sourceTree = "<group>"; };
 		72376F861E8FA0D4009045CF /* TSDOhMyGod-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSDOhMyGod-Prefix.pch"; sourceTree = "<group>"; };
@@ -82,6 +82,11 @@
 		72376F891E8FA25A009045CF /* home12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home12@2x.png"; sourceTree = "<group>"; };
 		72376F8A1E8FA25A009045CF /* user0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user0@2x.png"; sourceTree = "<group>"; };
 		72376F8B1E8FA25A009045CF /* user1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user1@2x.png"; sourceTree = "<group>"; };
+		726DAA391E94916600FC0968 /* bloglist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bloglist.json; sourceTree = "<group>"; };
+		726DAA3C1E9497FC00FC0968 /* TSDPersonalProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDPersonalProfileViewController.h; sourceTree = "<group>"; };
+		726DAA3D1E9497FC00FC0968 /* TSDPersonalProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDPersonalProfileViewController.m; sourceTree = "<group>"; };
+		726DAA3F1E94982E00FC0968 /* TSDBlogListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDBlogListViewController.h; sourceTree = "<group>"; };
+		726DAA401E94982E00FC0968 /* TSDBlogListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDBlogListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +138,7 @@
 		72376F2C1E8F8D5B009045CF /* TSDOhMyGod */ = {
 			isa = PBXGroup;
 			children = (
+				726DAA3B1E9497DB00FC0968 /* TSDPersonalProfile */,
 				72376F661E8F9323009045CF /* TSDTabBar */,
 				72376F651E8F92AA009045CF /* Images */,
 				72376F641E8F928C009045CF /* TSDNavgation */,
@@ -145,8 +151,6 @@
 				72376F781E8F9531009045CF /* TSDOneViewController.m */,
 				72376F7D1E8F9559009045CF /* TSDTwoViewController.h */,
 				72376F7E1E8F9559009045CF /* TSDTwoViewController.m */,
-				72376F801E8F956E009045CF /* TSDPersonalProfileViewController.h */,
-				72376F811E8F956E009045CF /* TSDPersonalProfileViewController.m */,
 				72376F831E8F958C009045CF /* TSDUser.h */,
 				72376F841E8F958C009045CF /* TSDUser.m */,
 			);
@@ -156,6 +160,7 @@
 		72376F2D1E8F8D5B009045CF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				726DAA391E94916600FC0968 /* bloglist.json */,
 				72376F2E1E8F8D5B009045CF /* main.m */,
 			);
 			name = "Supporting Files";
@@ -213,6 +218,17 @@
 				72376F711E8F93AD009045CF /* TSDTabBarController.m */,
 			);
 			path = TSDTabBar;
+			sourceTree = "<group>";
+		};
+		726DAA3B1E9497DB00FC0968 /* TSDPersonalProfile */ = {
+			isa = PBXGroup;
+			children = (
+				726DAA3C1E9497FC00FC0968 /* TSDPersonalProfileViewController.h */,
+				726DAA3D1E9497FC00FC0968 /* TSDPersonalProfileViewController.m */,
+				726DAA3F1E94982E00FC0968 /* TSDBlogListViewController.h */,
+				726DAA401E94982E00FC0968 /* TSDBlogListViewController.m */,
+			);
+			path = TSDPersonalProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +343,7 @@
 				72376F3A1E8F8D5B009045CF /* Assets.xcassets in Resources */,
 				72376F901E8FA25A009045CF /* user1@2x.png in Resources */,
 				72376F8E1E8FA25A009045CF /* home12@2x.png in Resources */,
+				726DAA3A1E94916600FC0968 /* bloglist.json in Resources */,
 				72376F8D1E8FA25A009045CF /* home1@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,10 +373,11 @@
 				72376F321E8F8D5B009045CF /* AppDelegate.m in Sources */,
 				72376F721E8F93AD009045CF /* TSDTabBarController.m in Sources */,
 				72376F691E8F933B009045CF /* TSDAnimationManager.m in Sources */,
+				726DAA411E94982E00FC0968 /* TSDBlogListViewController.m in Sources */,
 				72376F6F1E8F9393009045CF /* TSDTabBar.m in Sources */,
 				72376F791E8F9531009045CF /* TSDOneViewController.m in Sources */,
-				72376F821E8F956E009045CF /* TSDPersonalProfileViewController.m in Sources */,
 				72376F7F1E8F9559009045CF /* TSDTwoViewController.m in Sources */,
+				726DAA3E1E9497FC00FC0968 /* TSDPersonalProfileViewController.m in Sources */,
 				72376F6C1E8F9363009045CF /* UIButton+ImageAndTitle.m in Sources */,
 				72376F851E8F958C009045CF /* TSDUser.m in Sources */,
 				72376F2F1E8F8D5B009045CF /* main.m in Sources */,
@@ -581,6 +599,7 @@
 				72376F591E8F8D5C009045CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72376F5A1E8F8D5C009045CF /* Build configuration list for PBXNativeTarget "TSDOhMyGodTests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +608,7 @@
 				72376F5C1E8F8D5C009045CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72376F5D1E8F8D5C009045CF /* Build configuration list for PBXNativeTarget "TSDOhMyGodUITests" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +617,7 @@
 				72376F5F1E8F8D5C009045CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

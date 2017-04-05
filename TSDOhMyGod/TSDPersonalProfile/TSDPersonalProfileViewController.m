@@ -7,6 +7,7 @@
 //
 
 #import "TSDPersonalProfileViewController.h"
+#import "TSDBlogListViewController.h"
 #define MHeaderHeight 280
 
 @interface TSDPersonalProfileViewController ()<UITableViewDelegate,UITableViewDataSource> {
@@ -37,15 +38,21 @@
     if (!self.m_tableView) {
         self.m_tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStyleGrouped];
         self.m_tableView.tableHeaderView = header_view;
-        self.m_tableView.delegate = self;
         self.m_tableView.dataSource = self;
         [self.view addSubview:self.m_tableView];
     }
+    self.m_tableView.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    //如果delegate不设置为nil,在写一个界面的viewWillAppear后scrollViewDidScroll的方法还会执行，影响导航栏的设置
+    self.m_tableView.delegate = nil;
+    [super viewWillDisappear:animated];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -86,6 +93,14 @@
     
     return 50;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0 && indexPath.row == 0) {//常用博客
+        TSDBlogListViewController *next = [[TSDBlogListViewController alloc] init];
+        [self.navigationController pushViewController:next animated:YES];
+    }
+}
 //- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
 //    if (section > 0) {
 //        return 20;
@@ -95,33 +110,12 @@
 
 #pragma mark - ScorllViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    //    NSLog(@"scrollViewDidScroll position y:%f",scrollView.contentOffset.y);
-    //    if (scrollView.contentOffset.y > lastY) { //向上滑动
-    //        if (scrollView.contentOffset.y >= 64) {
-    //            if (scrollView.contentOffset.y <= 104) {
-    //                [[MDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:1.0/40*(scrollView.contentOffset.y-64)];
-    //                NSLog(@"%f",1.0/40*(scrollView.contentOffset.y-64));
-    //            } else {
-    //                [[MDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:1];
-    //            }
-    //        }
-    //    } else {//向下滑动
-    //        if (scrollView.contentOffset.y >= 24) {
-    //            if (scrollView.contentOffset.y <= 64) {
-    //                [[MDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:1-1.0/40*(64-scrollView.contentOffset.y)];
-    //                NSLog(@"%f",1.0/40*(64-scrollView.contentOffset.y));
-    //            } else {
-    //                [[MDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:1];
-    //            }
-    //        }
-    //    }
-    //    lastY = scrollView.contentOffset.y;
-    
     CGFloat offsetY = scrollView.contentOffset.y;
     NSLog(@"offsetY:%f",offsetY);
-    if (offsetY > MHeaderHeight-64-64) {
-        NSInteger offset = MHeaderHeight-64;
-        CGFloat alpha = 1 - ((offset - offsetY) / offset);
+    if (offsetY > MHeaderHeight-64*2) {
+        NSInteger offset = MHeaderHeight-64*2;
+        CGFloat alpha = ((offsetY - offset) / 64);
+        NSLog(@"offsetY:%f,offset:%ld,alpha:%f",offsetY,(long)offset,alpha);
         [[TSDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:alpha];
     } else {
         [[TSDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:0];
@@ -129,11 +123,6 @@
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    //    if (scrollView.contentOffset.y < 64) {//滑动过快会跳帧
-    //        [[MDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:0];
-    //    } else {
-    //        [[MDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:1];
-    //    }
 }
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
 }

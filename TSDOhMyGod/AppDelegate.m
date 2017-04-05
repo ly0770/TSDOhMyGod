@@ -12,6 +12,7 @@
 #import "TSDOneViewController.h"
 #import "TSDTwoViewController.h"
 #import "TSDTabBar.h"
+#import "TSDPersonalProfileViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -23,7 +24,7 @@
     TSDNavigationVC *oneNav = [[TSDNavigationVC alloc] initWithRootViewController:oneVC];
     oneVC.hidesBottomBarWhenPushed = NO;
     
-    TSDTwoViewController *twoVC = [[TSDTwoViewController alloc] init];
+    TSDPersonalProfileViewController *twoVC = [[TSDPersonalProfileViewController alloc] init];
     TSDNavigationVC *twoNav = [[TSDNavigationVC alloc] initWithRootViewController:twoVC];
     twoVC.hidesBottomBarWhenPushed = NO;
     

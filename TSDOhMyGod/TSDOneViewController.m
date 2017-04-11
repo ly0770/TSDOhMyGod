@@ -9,7 +9,8 @@
 #import "TSDOneViewController.h"
 #import <objc/objc.h>
 #import "TSDPersonalProfileViewController.h"
-
+#import "TSDDatabaseManager.h"
+#import "FMDB.h"
 @interface TSDOneViewController ()<CAAnimationDelegate> {
     UIView *testView;
     CALayer *layer;
@@ -45,7 +46,39 @@
     //    self.navigationController.navigationBar.translucent = NO;
     //    self.navigationController.navigationBar.alpha = 1;
     [[TSDUser userInstance] setNavBarColorWithNavBar:self.navigationController.navigationBar color:nil alpha:1];
-    [self testAnimation];
+//    [self testAnimation];
+//    [self testDB];
+}
+
+- (void)testDB {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *fileName = [NSString stringWithFormat:@"FMDB.db"];
+    NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
+    TSDDatabaseManager *dbManager = [TSDDatabaseManager defaultManager];
+    dbManager.dbPath = filePath;
+//    if ([dbManager openDB]) {
+//        [dbManager createTableWithName:@"TaskTable" items:nil];
+//        [dbManager insertIntoTable:@"TaskTable" insertItems:nil];
+//    } else {
+//        NSLog(@"open failed");
+//    }
+//    [dbManager closeDB];
+    
+//    if ([dbManager openDB]) {
+//        [dbManager insertIntoTable:@"TaskTable" insertItems:nil];
+//    } else {
+//        NSLog(@"insert failed");
+//    }
+//    [dbManager closeDB];
+    if ([dbManager openDB]) {
+        [dbManager query];
+    } else {
+        NSLog(@"open failed");
+    }
+    [dbManager closeDB];
+
+//    [[TSDUser userInstance] redirectNSlogToDocumentFolder];
 }
 
 - (void)testAnimation {

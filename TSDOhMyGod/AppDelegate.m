@@ -13,6 +13,7 @@
 #import "TSDTwoViewController.h"
 #import "TSDTabBar.h"
 #import "TSDPersonalProfileViewController.h"
+#import "TSDTaskHomeViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -24,16 +25,20 @@
     TSDNavigationVC *oneNav = [[TSDNavigationVC alloc] initWithRootViewController:oneVC];
     oneVC.hidesBottomBarWhenPushed = NO;
     
+    TSDTaskHomeViewController *taskVC = [[TSDTaskHomeViewController alloc] init];
+    TSDNavigationVC *taskNav = [[TSDNavigationVC alloc] initWithRootViewController:taskVC];
+    taskVC.hidesBottomBarWhenPushed = NO;
+    
     TSDPersonalProfileViewController *twoVC = [[TSDPersonalProfileViewController alloc] init];
     TSDNavigationVC *twoNav = [[TSDNavigationVC alloc] initWithRootViewController:twoVC];
     twoVC.hidesBottomBarWhenPushed = NO;
     
     TSDTabBarController *tabVC = [[TSDTabBarController alloc] init];
-    tabVC.viewControllers = @[oneNav,twoNav];
+    tabVC.viewControllers = @[oneNav,taskNav,twoNav];
     
     TSDTabBar* tabBar = [TSDTabBar mTabBar];
     tabBar.isItemAnimition = YES;
-    [tabBar setSelectedItemIcon:@[@"home1",@"user1"] unselectedItemIcon:@[@"home0",@"user0"] titles:@[@"首页",@"个人"]];
+    [tabBar setSelectedItemIcon:@[@"home1",@"home12",@"user1"] unselectedItemIcon:@[@"home0",@"home0",@"user0"] titles:@[@"首页",@"今日任务",@"个人"]];
     tabVC.m_tabBar = tabBar;
     
     self.window.rootViewController = tabVC;

@@ -10,9 +10,8 @@
 #import "TSDBlogListViewController.h"
 #define MHeaderHeight 280
 
-@interface TSDPersonalProfileViewController ()<UITableViewDelegate,UITableViewDataSource> {
-    CGFloat lastY;
-}
+@interface TSDPersonalProfileViewController ()<UITableViewDelegate,UITableViewDataSource>
+
 @property (nonatomic, strong) UITableView *m_tableView;
 
 @end
@@ -34,7 +33,6 @@
     CGRect rect = [UIScreen mainScreen].bounds;
     rect.origin.y -= 64;
     rect.size.height += 44;
-    lastY = rect.origin.y;
     if (!self.m_tableView) {
         self.m_tableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStyleGrouped];
         self.m_tableView.tableHeaderView = header_view;

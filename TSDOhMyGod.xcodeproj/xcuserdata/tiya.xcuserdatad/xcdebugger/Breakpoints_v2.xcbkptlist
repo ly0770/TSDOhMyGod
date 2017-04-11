@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TSDOhMyGod/TSDUser.m"
-            timestampString = "513056251.389483"
+            filePath = "TSDOhMyGod/ThirdPart/FMDB/fmdb/FMDatabase.m"
+            timestampString = "513569295.050336"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "-setNavBarColorWithNavBar:color:alpha:"
+            startingLineNumber = "475"
+            endingLineNumber = "475"
+            landmarkName = "-databaseExists"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TSDOhMyGod/ThirdPart/FMDB/fmdb/FMDatabase.m"
+            timestampString = "513569296.568315"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "480"
+            endingLineNumber = "480"
+            landmarkName = "-databaseExists"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

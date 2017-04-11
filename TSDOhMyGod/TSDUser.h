@@ -21,5 +21,8 @@
  **读取json文件数据
  */
 - (NSArray *)readDataFromJsonFile:(NSString *)fileName;
-
+/*
+ **将NSLog打印到外部文件
+ */
+- (void)redirectNSlogToDocumentFolder;
 @end

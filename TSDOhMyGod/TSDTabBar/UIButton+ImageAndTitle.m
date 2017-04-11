@@ -21,7 +21,7 @@
     }
     self.titleEdgeInsets = UIEdgeInsetsMake(0, -imageSize.width, -imageSize.height - 8, 0);
     self.imageEdgeInsets = UIEdgeInsetsMake(-titleSize.height+2, 0, 0, -titleSize.width);
-    NSLog(@"title edge top:%f,left:%f,bottom:%f,right:%f",self.titleEdgeInsets.top,self.titleEdgeInsets.left,self.titleEdgeInsets.bottom,self.titleEdgeInsets.right);
-    NSLog(@"image edge top:%f,left:%f,bottom:%f,right:%f",self.imageEdgeInsets.top,self.imageEdgeInsets.left,self.imageEdgeInsets.bottom,self.imageEdgeInsets.right);
+//    NSLog(@"title edge top:%f,left:%f,bottom:%f,right:%f",self.titleEdgeInsets.top,self.titleEdgeInsets.left,self.titleEdgeInsets.bottom,self.titleEdgeInsets.right);
+//    NSLog(@"image edge top:%f,left:%f,bottom:%f,right:%f",self.imageEdgeInsets.top,self.imageEdgeInsets.left,self.imageEdgeInsets.bottom,self.imageEdgeInsets.right);
 }
 @end

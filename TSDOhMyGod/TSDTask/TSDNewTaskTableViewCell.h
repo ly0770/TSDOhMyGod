@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TSDNewTaskTableViewCell : UITableViewCell
-
+//@property (nonatomic, strong) UIImageView *m_imageView;
+@property (nonatomic, strong) UITextField *m_textField;
 @end

@@ -12,6 +12,31 @@
 #define UScreenHeight MAX([UIScreen mainScreen].bounds.size.height,[UIScreen mainScreen].bounds.size.width)//手机屏幕高
 #define UScreenWidth MIN([UIScreen mainScreen].bounds.size.height,[UIScreen mainScreen].bounds.size.width)//手机屏幕宽
 
+#define RGBHexColorAlpha(hexValue,alp)  RGBColor(((hexValue)>>16)&0xff,((hexValue)>>8)&0xff,(hexValue)&0xff,alp)
+#define RGBHexColor(hexValue) RGBHexColorAlpha(hexValue,1)
+#define RGBColor(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+#define RGBColor_Float(r,g,b,a) [UIColor colorWithRed:r green:g blue:b alpha:a]
+#define PCCWKGroupTableColor RGBColor_Float(0.9451,0.9451,0.9451,1)
+#define PCCWKClearColor [UIColor clearColor]
+#define PCCWKBlueColor RGBColor_Float(0.0118,0.0118,0.0196,1)
+//#define PCCWKBlueColor RGBHexColor(0x3e44cc)
+#define PCCWKWhiteColor RGBColor_Float(0.9922,0.9922,0.9922,1)
+#define PCCWKRedColor RGBColor_Float(1,0.2157,0.2118,1)
+#define PCCKWGreenColor RGBColor_Float(0, 0.8, 0.7961, 1)
+//new
+#define PCCWKNameColor RGBColor(102.0,102.0,102.0,1) //姓名文字
+#define PCCWKTitleColor RGBColor(34.0,34.0,34.0,1) //头部标题字黑
+#define PCCWKActiveRedColor RGBColor(255.0,59.0,48.0,1)//头部标题字红
+#define PCCWKActiveGreenColor RGBColor(0.0,174.0,13.0,1)//默认绿色
+#define PCCWKDefaultTitleColor RGBColor(51.0,51.0,51.0,1)//默认字黑
+#define PCCWKDetailColor RGBColor(172.0,172.0,172.0,1)//辅助字体色
+//#define PCCWKCellLeftTitleColor RGBColor(51.0,151.0,51.0,1)//
+//#define PCCWKCellRightTitleColor RGBColor(172.0,172.0,172.0,1)
+#define PCCWKBackgroundGrayColor RGBColor(240.0,240.0,240.0,1) //灰色背景
+#define PCCWKLineColor RGBColor(221.0,221.0,221.0,1) //姓名文字
+#define PCCWKActiveBlueColor RGBColor_Float(0.1922, 0.5529, 0.8627, 1)
+
+
 #ifndef TSDOhMyGod_Prefix_pch
 #define TSDOhMyGod_Prefix_pch
 // Include any system framework and library headers here that should be included in all compilation units.

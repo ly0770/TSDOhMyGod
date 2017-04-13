@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TSDBaseViewController.h"
 
-@interface TSDTaskHomeViewController : UIViewController
+@interface TSDTaskHomeViewController : TSDBaseViewController
 
 @end

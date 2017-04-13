@@ -8,6 +8,8 @@
 
 #import "TSDNewTaskViewController.h"
 #import "TSDNewTaskTableViewCell.h"
+#import "TSDDatabaseManager.h"
+#import "TSDTabBarController.h"
 @interface TSDNewTaskViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate,UIAlertViewDelegate> {
     UITextField *_m_currentT;
 }
@@ -15,23 +17,24 @@
 @property (nonatomic, strong) UITableView *m_tableView;
 @property (nonatomic, copy) NSArray *m_sourceArray;
 @property (nonatomic, strong) NSMutableDictionary *m_uploadInfo;
+@property (nonatomic, strong) UIDatePicker *m_date_picker;
 @end
 
 @implementation TSDNewTaskViewController
 
 - (void)initTestData {
-//    self.m_sourceArray = @[@{@"name":@"任务名称",@"isMust":@1},
-//                           @{@"name":@"开始时间",@"isMust":@1},
-//                           @{@"name":@"结束时间",@"isMust":@1},
-//                           @{@"name":@"重复方式",@"isMust":@1},
-//                           @{@"name":@"提醒设置",@"isMust":@0},
-//                           @{@"name":@"任务类型",@"isMust":@0}];
-    self.m_sourceArray = @[@{@"name":@"AA",@"isMust":@1},
-                           @{@"name":@"BB",@"isMust":@1},
-                           @{@"name":@"CC",@"isMust":@1},
-                           @{@"name":@"DD",@"isMust":@1},
-                           @{@"name":@"EE",@"isMust":@0},
-                           @{@"name":@"FF",@"isMust":@0}];
+    self.m_sourceArray = @[@{@"name":@"任务名称",@"isMust":@1},
+                           @{@"name":@"开始时间",@"isMust":@1},
+                           @{@"name":@"结束时间",@"isMust":@1},
+                           @{@"name":@"重复方式",@"isMust":@1},
+                           @{@"name":@"提醒设置",@"isMust":@0},
+                           @{@"name":@"任务类型",@"isMust":@0}];
+//    self.m_sourceArray = @[@{@"name":@"AA",@"isMust":@1},
+//                           @{@"name":@"BB",@"isMust":@1},
+//                           @{@"name":@"CC",@"isMust":@1},
+//                           @{@"name":@"DD",@"isMust":@1},
+//                           @{@"name":@"EE",@"isMust":@0},
+//                           @{@"name":@"FF",@"isMust":@0}];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,6 +49,9 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+//    self.m_tabBarController.m_tabBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+//    [(TSDTabBarController*)self.tabBarController m_tabBar].hidden = YES;
     self.m_tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     self.m_tableView.delegate = self;
     self.m_tableView.dataSource = self;
@@ -58,9 +64,11 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    self.tabBarController.tabBar.hidden = NO;
     [_m_currentT resignFirstResponder];
     [self removeNotification];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -80,8 +88,17 @@
     [_m_currentT resignFirstResponder];
     NSLog(@"saveTaskItemClicked");
     NSLog(@"upload info:%@",_m_uploadInfo);
-    BOOL isCanSave = [self checkIfCanSave];
-    NSLog(@"isCanSave:%d",isCanSave);
+//    BOOL isCanSave = [self checkIfCanSave];
+//    NSLog(@"isCanSave:%d",isCanSave);
+    TSDDatabaseManager *dbManager = [TSDDatabaseManager defaultManager];
+    dbManager.m_dbName = DBName;
+    if ([dbManager openDB]) {
+        
+        [dbManager insertIntoTable:DBTaskTableName insertItems:@[_m_uploadInfo]];
+    } else {
+        NSLog(@"insert failed");
+    }
+    [dbManager closeDB];
 }
 
 #pragma mark -- TableViewDatasource
@@ -128,6 +145,31 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     _m_currentT = textField;
+    switch (textField.tag - 1000) {
+        case 0://任务名称
+            
+            break;
+        case 1: {//开始时间
+            [self showDatePicker];
+            return NO;
+        }
+            break;
+        case 2://结束时间
+            
+            break;
+        case 3://重复方式
+            
+            break;
+        case 4://提醒设置
+            
+            break;
+        case 5://任务类型
+            
+            break;
+ 
+        default:
+            break;
+    }
     return YES;
 }
 
@@ -238,6 +280,36 @@
         return NO;
     }
     return YES;
+}
+
+#pragma mark -- DatePicker
+- (void)showDatePicker {
+    if (!_m_date_picker) {
+        _m_date_picker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, UScreenHeight, UScreenWidth, 200)];
+        [self.view addSubview:_m_date_picker];
+    }
+    [_m_date_picker setDatePickerMode:UIDatePickerModeDate];
+    _m_date_picker.backgroundColor = [UIColor whiteColor];
+    NSDate *minDate = [NSDate date];
+    [_m_date_picker setMinimumDate:minDate];
+    [_m_date_picker addTarget:self action:@selector(dataValueChanged:) forControlEvents:UIControlEventValueChanged];
+    [UIView animateWithDuration:0.5 animations:^{
+        CGRect rect = _m_date_picker.frame;
+        rect.origin.y = rect.origin.y - rect.size.height;
+        _m_date_picker.frame = rect;
+    }];
+}
+
+- (void)hideDatePicker {
+    [UIView animateWithDuration:0.5 animations:^{
+        CGRect rect = _m_date_picker.frame;
+        rect.origin.y = rect.origin.y + rect.size.height;
+        _m_date_picker.frame = rect;
+    }];
+    
+}
+- (void)dataValueChanged:(UIDatePicker *)sender {
+    
 }
 
 @end

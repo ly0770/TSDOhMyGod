@@ -51,12 +51,12 @@
 }
 
 - (void)testDB {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentDirectory = [paths objectAtIndex:0];
-    NSString *fileName = [NSString stringWithFormat:@"FMDB.db"];
-    NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentDirectory = [paths objectAtIndex:0];
+//    NSString *fileName = [NSString stringWithFormat:@"FMDB.db"];
+//    NSString *filePath = [documentDirectory stringByAppendingPathComponent:fileName];
     TSDDatabaseManager *dbManager = [TSDDatabaseManager defaultManager];
-    dbManager.dbPath = filePath;
+    dbManager.m_dbName = @"FMDB.db";
 //    if ([dbManager openDB]) {
 //        [dbManager createTableWithName:@"TaskTable" items:nil];
 //        [dbManager insertIntoTable:@"TaskTable" insertItems:nil];

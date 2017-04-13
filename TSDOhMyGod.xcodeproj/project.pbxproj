@@ -40,6 +40,7 @@
 		726DAA681E94EBE100FC0968 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 726DAA5D1E94EBE100FC0968 /* Info.plist */; };
 		726DAA6F1E95D69600FC0968 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 726DAA6E1E95D69600FC0968 /* libsqlite3.tbd */; };
 		72E1BCC71E9DFDAF00CB2479 /* UIColor+TSD.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E1BCC61E9DFDAF00CB2479 /* UIColor+TSD.m */; };
+		72E1BCCA1E9F609F00CB2479 /* TSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E1BCC91E9F609F00CB2479 /* TSDBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,8 @@
 		726DAA6E1E95D69600FC0968 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		72E1BCC51E9DFDAF00CB2479 /* UIColor+TSD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TSD.h"; sourceTree = "<group>"; };
 		72E1BCC61E9DFDAF00CB2479 /* UIColor+TSD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TSD.m"; sourceTree = "<group>"; };
+		72E1BCC81E9F609F00CB2479 /* TSDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDBaseViewController.h; sourceTree = "<group>"; };
+		72E1BCC91E9F609F00CB2479 /* TSDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSDBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +212,8 @@
 				72376F841E8F958C009045CF /* TSDUser.m */,
 				72E1BCC51E9DFDAF00CB2479 /* UIColor+TSD.h */,
 				72E1BCC61E9DFDAF00CB2479 /* UIColor+TSD.m */,
+				72E1BCC81E9F609F00CB2479 /* TSDBaseViewController.h */,
+				72E1BCC91E9F609F00CB2479 /* TSDBaseViewController.m */,
 			);
 			path = TSDOhMyGod;
 			sourceTree = "<group>";
@@ -488,6 +493,7 @@
 				726DAA641E94EBE100FC0968 /* FMDatabaseAdditions.m in Sources */,
 				72376F851E8F958C009045CF /* TSDUser.m in Sources */,
 				726DAA661E94EBE100FC0968 /* FMDatabaseQueue.m in Sources */,
+				72E1BCCA1E9F609F00CB2479 /* TSDBaseViewController.m in Sources */,
 				726DAA651E94EBE100FC0968 /* FMDatabasePool.m in Sources */,
 				72376F2F1E8F8D5B009045CF /* main.m in Sources */,
 				72E1BCC71E9DFDAF00CB2479 /* UIColor+TSD.m in Sources */,

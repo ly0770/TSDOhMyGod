@@ -36,7 +36,9 @@
 #define PCCWKLineColor RGBColor(221.0,221.0,221.0,1) //姓名文字
 #define PCCWKActiveBlueColor RGBColor_Float(0.1922, 0.5529, 0.8627, 1)
 
-
+//db
+#define DBTaskTableName @"TSDTaskTable"
+#define DBName @"TSDTaskDB"
 #ifndef TSDOhMyGod_Prefix_pch
 #define TSDOhMyGod_Prefix_pch
 // Include any system framework and library headers here that should be included in all compilation units.

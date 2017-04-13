@@ -10,9 +10,9 @@
 #import "FMDB.h"
 @interface TSDDatabaseManager : NSObject
 /*
- **所处理的db的路径
+ **所处理的db的名称
  */
-@property (nonatomic, copy) NSString *dbPath;
+@property (nonatomic, copy) NSString *m_dbName;
 
 + (instancetype)defaultManager;
 /*
